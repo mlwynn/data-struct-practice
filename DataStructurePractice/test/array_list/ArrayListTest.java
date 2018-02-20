@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * Tests the ArrayList class.
+ * Tests the ArrayList class with small (<20) inputs.
  * @author Meredith Wynn
  *
  */
@@ -40,7 +40,22 @@ public class ArrayListTest {
 		assertTrue(li.getCap() == 10);
 		assertTrue(li.getSize() == 3);
 		
+		//test for resizing
+		li.add("four");
+		li.add("five");
+		li.add("six");
+		li.add("seven");
+		li.add("eight");
+		li.add("nine");
+		li.add("ten");
+		li.add("eleven");
+		li.add("twelve");
+		li.add("thirteen");
+		li.add("fourteen");
 		
+		//ensure correct size and capacity
+		assertTrue(li.getSize() == 14);
+		assertTrue(li.getCap() == 20);
 	}
 
 }

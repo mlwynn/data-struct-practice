@@ -4,6 +4,7 @@
 package array_list;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * @author Meredith Wynn
@@ -52,6 +53,7 @@ public class ArrayList<E> {
 		//if list is not big enough, double the capacity
 		if(size++ >= cap) {
 			cap *=2;
+			this.arr = Arrays.copyOf(arr, cap);
 		}
 		//add the new element to the end of the list
 		this.arr[size - 1] = elem;
