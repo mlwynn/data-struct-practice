@@ -28,7 +28,7 @@ public class ArrayList<E> {
 	 * contains no elements.
 	 */
 	public ArrayList(Class<E> c) {
-		new ArrayList<E>(c, INIT_CAP);
+		this(c, INIT_CAP);
 	}
 	
 	/**
@@ -54,7 +54,7 @@ public class ArrayList<E> {
 			cap *=2;
 		}
 		//add the new element to the end of the list
-		this.arr[size] = elem;
+		this.arr[size - 1] = elem;
 		
 	}
 	
